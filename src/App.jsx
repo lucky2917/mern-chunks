@@ -1,6 +1,6 @@
-import Api1 from'./api1.jsx'
-import Api2 from'./api2.jsx'
-import Mocklogin from'./mocklogin.jsx'
+import Api1 from'./day1.1/api1.jsx'
+import Api2 from'./day1.2/api2.jsx'
+import Mocklogin from'./day1.3/mocklogin.jsx'
 function App() {
   return(
     <div>
