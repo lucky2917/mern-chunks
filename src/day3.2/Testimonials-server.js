@@ -42,7 +42,7 @@ app.post('/api/testimonials', async (req,res)=>{
 })
 app.delete('/api/testimonials/:id', async (req,res) => {
     try{
-        const removed = Testimonial.findByIdAndDelete(req.params.id);
+        const removed = await Testimonial.findByIdAndDelete(req.params.id);
         res.json("done deleted");
     }
     catch(err){
