@@ -23,6 +23,20 @@ export default function Testimonials(){
         setname("");
         setdescription("");
     }
+    const handleDelete = async(id) => {
+        try{
+            await fetch(`http://localhost:5003/api/testimonials/${id}`,{
+                method: 'DELETE'
+            })
+            setTestimonials(prev =>
+                prev.filter((t) => t._id !== id)
+            );
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+
     return(
         <div>
             <form onSubmit={print}>
@@ -34,6 +48,8 @@ export default function Testimonials(){
             <div key={t._id}>
               <h4>{t.name}</h4>
               <p>{t.description}</p>
+
+              <button onClick={() => handleDelete(t._id)}>Delete</button>
             </div>
           ))}
         </div>

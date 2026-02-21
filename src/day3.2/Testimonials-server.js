@@ -40,4 +40,15 @@ app.post('/api/testimonials', async (req,res)=>{
         console.log(err);
     }
 })
+app.delete('/api/testimonials/:id', async (req,res) => {
+    try{
+        const removed = Testimonial.findByIdAndDelete(req.params.id);
+        res.json("done deleted");
+    }
+    catch(err){
+        console.log(err);
+    }
+
+})
+
 app.listen(process.env.PORT);
