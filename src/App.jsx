@@ -1,8 +1,8 @@
-import Api1 from'./day1.1/api1.jsx'
-import Api2 from'./day1.2/api2.jsx'
-import Mocklogin from'./day1.3/mocklogin.jsx'
-import Api3 from './day2.1/api3.jsx';
-import Testimonials from './day3.2/Testimonials.jsx';
+import Api1 from'./react-node-API/api1.jsx'
+import Api2 from'./react-node-API2/api2.jsx'
+import Mocklogin from'./local-auth/mocklogin.jsx'
+import Api3 from './react-node-API3/api3.jsx';
+import Testimonials from './testimonials-CRUD/Testimonials.jsx';
 function App() {
   return(
     <div>
