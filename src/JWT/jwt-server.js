@@ -6,7 +6,7 @@ require("dotenv").config({ path: "../../.env" });
 const bcrypt = require('bcryptjs')
 const jwt = require("jsonwebtoken");
 app.use(express.json());
-const { verifyToken } = require("./middleware");
+const { verifyToken, requireAdmin } = require("./middleware");
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 const rateLimit = require("express-rate-limit");
@@ -69,6 +69,10 @@ app.post('/api/auth/login', loginLimiter, async(req,res) => {
     });
 
 
+})
+
+app.post('/api/auth/admin', verifyToken, requireAdmin ,(req,res) => {
+    res.json("welcome admin");
 })
 
 app.post('/api/auth/logout', (req,res) => {
