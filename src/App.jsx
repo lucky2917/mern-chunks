@@ -3,6 +3,7 @@ import Api2 from'./react-node-API2/api2.jsx'
 import Mocklogin from'./local-auth/mocklogin.jsx'
 import Api3 from './react-node-API3/api3.jsx';
 import Testimonials from './testimonials-CRUD/Testimonials.jsx';
+import Chatserver from './sockets/chat-server.jsx';
 function App() {
   return(
     <div>
@@ -16,6 +17,8 @@ function App() {
       <Api3 />
       <h2>Day 3.2</h2>
       <Testimonials />
+      <h2>chat app</h2>
+      <Chatserver />
     </div>
     
   );
